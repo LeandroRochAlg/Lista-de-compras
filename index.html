@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Carrinho de compras</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Ofertas do dia</a></li>
+                <li><a href="">Suporte</a></li>
+            </ul>
+        </nav>
+        <h1>Carrinho de Compras</h1>
+    </header>
+    <main>
+        <form action="" method="post">
+            <h2>Adicione os produtos ao carrinho</h2>
+            <div class="produto">
+                <label for="produto">Produto:</label>
+                <input type="text" name="produto" id="produto" placeholder="Exemplo: PlayStation 5">
+            </div>
+            <div class="quatidade">
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" name="quantidade" id="quantidade" placeholder="Exemplo: 3">
+            </div>
+            <div class="preco">
+                <label for="preco">Preço:</label>
+                <input type="number" name="preco" id="preco" placeholder="Exemplo: 5000">
+            </div>
+            <button type="submit">Adicionar</button>
+        </form>
+        <div class="lista">
+            <h2>Lista de produtos já adicionados</h2>
+            <div class="produtos">
+                <p>Nenhum produto foi adicionado ainda</p>
+                <ul id="produtos">
+                    <li>Placeholder <span><button>+</button>3<button>-</button></span><span>R$4999,99</span><button>Remover</button></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Desenvolvido por <span>Leandro Rocha</span></p>
+        <div>
+            <p>Onde me encontrar:</p>
+            <ul>
+                <li><a href="https://github.com/LeandroRochAlg" target="_blank"><img src="/img/github.png" alt="Logo do GitHub">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/leandro-rocha-258b90198/" target="_blank"><img src="/img/linkedin.png" alt="Logo do Linkedin">Linkedin</a></li>
+                <li><a href="https://www.instagram.com/LeandroRochAlg" target="_blank"><img src="/img/instagram.png" alt="Logo do Instagram">Instagram</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
