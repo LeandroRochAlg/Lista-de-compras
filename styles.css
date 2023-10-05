@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 :root {
-    --borda: 10px;
+    --borda: 1px solid rgb(0, 0, 0);
+    --bordaArr: 10px;
     --sombra: 10px 10px 30px rgb(178, 230, 213);
+    --botaoHover: #07EDA4;
+    --botao: #0BFFB8;
   }
 
 body{
@@ -14,7 +17,7 @@ body{
 
 nav{
     background-color: white;
-    border-radius: var(--borda);
+    border-radius: var(--bordaArr);
     margin: 10px 0 20px 0;
     padding: 5px;
     box-shadow: var(--sombra);
@@ -37,11 +40,11 @@ nav>ul>li>a{
     text-decoration: none;
     color: rgb(0, 0, 0);
     text-transform: uppercase;
-    border-radius: var(--borda);
+    border-radius: var(--bordaArr);
 }
 
 nav>ul>li>a:hover{
-    background-color: gainsboro;
+    background-color: var(--botao);
 }
 
 h1{
@@ -57,13 +60,13 @@ main{
     flex-direction: row;
     justify-content: space-between;
     background-color: white;
-    border-radius: var(--borda);
+    border-radius: var(--bordaArr);
     padding: 30px 10px;
     box-shadow: var(--sombra);
 }
 
 hr{
-    margin: 0;
+    margin: 1rem;
 }
 
 h2{
@@ -75,7 +78,7 @@ h2{
 
 form, .lista{
     text-align: left;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .produto{
@@ -109,23 +112,146 @@ form, .lista{
 input{
     margin: 0px;
     padding: .5rem;
-    border-radius: var(--borda);
-    border: 1px solid rgb(0, 0, 0);
+    border-radius: var(--bordaArr);
+    border: var(--borda);
     z-index: 0;
     height: 1rem;
 }
 
 #adicionar{
-    border-radius: var(--borda);
+    border-radius: var(--bordaArr);
     padding: .5rem;
-    border: 1px solid rgb(0, 0, 0);
+    border: var(--borda);
     width: 100%;
-    background-color: #0BFFB8;
+    background-color: var(--botao);
     color: black;
     font-weight: bold;
 }
 
 #adicionar:hover{
-    background-color: #07EDA4;
+    background-color: var(--botaoHover);
     cursor: pointer;
+}
+
+#produtos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.produtoListado{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: .25rem 0;
+    padding: 0;
+}
+
+#vazio{
+    text-align: center;
+    font-weight: thin;
+    margin: 4rem auto;
+    width: 50%;
+    height: 10%;
+    font-style: italic;
+}
+
+.alteraQtd{
+    margin: 0 5px;
+    border-radius: 100%;
+    border: var(--borda);
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: var(--botao);
+}
+
+.alteraQtd:hover{
+    background-color: var(--botaoHover);
+    cursor: pointer;
+}
+
+.nomePdt{
+    font-weight: bold;
+}
+
+.precoPdt{
+    text-decoration: underline;
+}
+
+.remover{
+    border: var(--borda);
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ED3707;
+    font-weight: bold;
+    font-size: 1rem;
+    color: white;
+}
+
+.remover:hover{
+    background-color: #A12100;
+    cursor: pointer;
+}
+
+footer{
+    margin: 3rem auto;
+    width: 100%;
+}
+
+footer>p{
+    margin: .25rem 0;
+    padding: 0 10px;
+}
+
+.reachMe{
+    font-weight: lighter;
+    box-shadow: var(--sombra);
+    background-color: white;
+    border-radius: var(--bordaArr);
+    padding: 10px 10px;
+}
+
+.reachMe>p{
+    margin: 0;
+    padding: 0;
+}
+
+.reachMe>ul{
+    list-style: none;
+    padding: 0;
+}
+
+.reachMe>ul>li>a{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+img{
+    width: 0.9rem;
+    filter: brightness(0);
+    margin: 0 5px;
+}
+
+.reachMe>ul>li>a:hover{
+    filter: opacity(60%);
+}
+
+@media screen and (max-width: 900px){
+    body{
+        width: 95%;
+    }
+
+    main{
+        flex-direction: column;
+    }
+
+    hr{
+        margin: 1rem;
+    }
 }
