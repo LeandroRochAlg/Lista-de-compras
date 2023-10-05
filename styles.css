@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root {
+    --borda: 10px;
+    --sombra: 10px 10px 30px rgb(178, 230, 213);
+  }
+
+body{
+    background-color: rgb(221, 255, 244);
+    width: 80%;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav{
+    background-color: white;
+    border-radius: var(--borda);
+    margin: 10px 0 20px 0;
+    padding: 5px;
+    box-shadow: var(--sombra);
+}
+
+nav>ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 0;
+}
+
+nav>ul>li{
+    background-color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+nav>ul>li>a{
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    border-radius: var(--borda);
+}
+
+nav>ul>li>a:hover{
+    background-color: gainsboro;
+}
+
+h1{
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2.25rem;
+    font-weight: bold;
+    text-shadow: var(--sombra);
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: var(--borda);
+    padding: 30px 10px;
+    box-shadow: var(--sombra);
+}
+
+hr{
+    margin: 0;
+}
+
+h2{
+    text-align: center;
+    margin: 0 0 20px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+form, .lista{
+    text-align: left;
+    margin: auto;
+}
+
+.produto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px 0 0 0;
+}
+
+.entrada{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.quantidade, .preco{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.produto>label, .entrada>label, .quantidade>label, .preco>label{
+    margin-bottom: -.3rem;
+    z-index: 1;
+    background-color: white;
+    width: fit-content;
+    margin-left: .4rem;
+    padding: 0 1px;
+}
+
+input{
+    margin: 0px;
+    padding: .5rem;
+    border-radius: var(--borda);
+    border: 1px solid rgb(0, 0, 0);
+    z-index: 0;
+    height: 1rem;
+}
+
+#adicionar{
+    border-radius: var(--borda);
+    padding: .5rem;
+    border: 1px solid rgb(0, 0, 0);
+    width: 100%;
+    background-color: #0BFFB8;
+    color: black;
+    font-weight: bold;
+}
+
+#adicionar:hover{
+    background-color: #07EDA4;
+    cursor: pointer;
+}
