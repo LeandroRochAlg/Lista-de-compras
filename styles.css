@@ -188,7 +188,7 @@ input{
     text-decoration: underline;
 }
 
-.remover{
+#remover{
     border: var(--borda);
     height: 1.5rem;
     width: 1.5rem;
@@ -200,7 +200,7 @@ input{
     color: white;
 }
 
-.remover:hover{
+#remover:hover{
     background-color: #A12100;
     cursor: pointer;
 }
